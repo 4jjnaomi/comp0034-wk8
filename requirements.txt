@@ -1,9 +1,3 @@
-# For Flask apps
-Flask
-Flask-SQLAlchemy
-Flask-Marshmallow
-Marshmallow-SQLAlchemy
-jwt
 # For Dash apps
 dash
 dash-bootstrap-components

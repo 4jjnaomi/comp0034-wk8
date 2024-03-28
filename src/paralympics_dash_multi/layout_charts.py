@@ -1,13 +1,13 @@
 """ Contains variables for all the rows and elements in the 'charts' page """
 import dash_bootstrap_components as dbc
-from dash import html, dcc, get_asset_url
-from paralympics_dash_multi.figures import line_chart, bar_gender
+from dash import Input, Output, html, dcc
+from paralympics_dash_multi.figures import line_chart, bar_gender_faceted
 
 # Create the Plotly Express line chart object, e.g. to show number of sports
 line = line_chart("sports")
 
 # Create the Plotly Express stacked bar chart object to show gender split of participants for the type of event
-bar = bar_gender("winter")
+bar = bar_gender_faceted(["winter"])
 
 line_chart_dropdown = dbc.Select(
     id="type-dropdown",  # id uniquely identifies the element, will be needed later
